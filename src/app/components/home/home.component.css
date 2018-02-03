@@ -1,0 +1,31 @@
+header {
+    background-color: #e0e0e0;
+    height: 100px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: 'Courier';
+    font-size: 30px;
+}
+
+header p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    color: black;
+}
+
+#main {
+    margin-top: 15px;
+    width: 100%;
+}
+
+
+#main .main-info .col-1 {
+    display: block;
+    width: 300px;
+}
+
+
+
+
+

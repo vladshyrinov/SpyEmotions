@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import { WebcamModule } from './modules/webcam/webcam.module';
 import { HttpClientModule } from '@angular/common/http';
 import { EmotionsService } from './services/emotions.service';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
