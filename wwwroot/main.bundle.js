@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class='panel-heading'>\n  {{greetings}}\n</h2>\n<hr/>\n<div style=\"text-align:center\">\n  <h1>\n    Ngx-Webcam Demo\n  </h1>\n\n  <div>\n    <app-webcam [trigger]=\"triggerObservable\" (imageCapture)=\"handleImage($event)\"></app-webcam>\n    <br/>\n    <button id=\"snapshotBtn\" (click)=\"triggerSnapshot();\">Take A Snapshot</button>\n  </div>\n</div>\n\n<div class=\"snapshot\" *ngIf=\"webcamImage\">\n  <h2>Nice one!</h2>\n  <img [src]=\"webcamImage.imageAsDataUrl\"/>\n</div>"
+module.exports = "<h2 class='panel-heading'>\r\n  {{greetings}}\r\n</h2>\r\n<hr/>\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Ngx-Webcam Demo\r\n  </h1>\r\n\r\n  <div>\r\n    <app-webcam [trigger]=\"triggerObservable\" (imageCapture)=\"handleImage($event)\"></app-webcam>\r\n    <br/>\r\n    <button id=\"snapshotBtn\" (click)=\"triggerSnapshot();\">Take A Snapshot</button>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"snapshot\" *ngIf=\"webcamImage\">\r\n  <h2>Nice one!</h2>\r\n  <img [src]=\"webcamImage.imageAsDataUrl\"/>\r\n</div>"
 
 /***/ }),
 
@@ -258,7 +258,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/modules/webcam/webcam/webcam.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"webcam-wrapper\" (click)=\"imageClick.next();\">\n  <video #video [width]=\"width\" [height]=\"height\" autoplay muted playsinline></video>\n  <canvas #canvas [width]=\"width\" [height]=\"height\"></canvas>\n</div>"
+module.exports = "<div class=\"webcam-wrapper\" (click)=\"imageClick.next();\">\r\n  <video #video [width]=\"width\" [height]=\"height\" autoplay muted playsinline></video>\r\n  <canvas #canvas [width]=\"width\" [height]=\"height\"></canvas>\r\n</div>"
 
 /***/ }),
 
@@ -421,13 +421,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var EmotionsService = /** @class */ (function () {
     function EmotionsService(http) {
         this.http = http;
-        this.baseUrl = 'http://localhost:5000';
+        // private baseUrl = 'http://localhost:58277';
+        this.baseUrl = 'https://spyemotions.azurewebsites.net';
+        this.httpOptions = {
+            headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'POST'
+            })
+        };
     }
     EmotionsService.prototype.getEmotions = function () {
         return this.http.get(this.baseUrl + '/api/Emotions/GetEmotions');
     };
     EmotionsService.prototype.setImage = function (body) {
-        return this.http.post(this.baseUrl + '/api/Emotions/PostImageGetEmotions', body);
+        return this.http.post(this.baseUrl + '/api/Emotions/PostImageGetEmotions', body, this.httpOptions);
     };
     EmotionsService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */])(),
