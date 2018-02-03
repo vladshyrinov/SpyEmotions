@@ -42,7 +42,7 @@ namespace SpyEmotions {
             string responseContent;
 
             byte[] byteData = null;
-            
+
             if (base64) {
                 byteData = Convert.FromBase64String(imageFile);
             } else {
