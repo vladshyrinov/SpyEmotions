@@ -8,13 +8,13 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class AppService {
-    private greetUrl = 'http://localhost:5000/api/Hello';
+    private greetUrl = 'http://localhost:5000';
 
     // Resolve HTTP using the constructor
     constructor(private http: Http) { }
 
     sayHello(): Observable<any> {
-        return this.http.get(this.greetUrl).map((response: Response) => {
+        return this.http.get(this.greetUrl + '/api/Hello/greetings').map((response: Response) => {
             return response.text();
         });
     }
