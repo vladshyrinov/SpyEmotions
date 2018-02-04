@@ -1,0 +1,22 @@
+
+.wrapper{
+    width:1000px;
+    margin: 0 auto 120px auto;
+    font-family: 'Varela Round', sans-serif;
+    
+}
+.head_center {
+    /* font-family: 'Varela Round', sans-serif; */
+    text-align:center;
+    color:#FF4500;
+}
+@media (min-width:856px) and (max-width:1024px){
+    .wrapper{
+        width:600px;
+    }
+}
+@media (min-width:500px) and (max-width:855px){
+    .wrapper{
+        width:300px;
+    }
+}

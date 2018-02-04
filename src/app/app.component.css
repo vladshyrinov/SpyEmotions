@@ -1,3 +1,6 @@
+*{
+  font-family: 'Varela Round', sans-serif;
+}
 #snapshotBtn {
     margin-top: 5px;
     font-size: 1.2em;
@@ -10,3 +13,43 @@
   ul {
     padding-bottom: 20px;
   }
+
+  header {
+    background-color: #e0e0e0;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: 'Courier';
+    font-size: 30px;
+    margin-top: -30px;
+}
+
+header p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    color: black;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #e0e0e0;
+  height: 80px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-family: 'Courier';
+  font-size: 30px;
+  z-index:100;
+  /* margin-top: 70px; */
+}
+
+footer p {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 80px;
+  color: black;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  font-size: 16px;
+}

@@ -1,0 +1,31 @@
+.box{
+   width:700px;
+   border:1px solid gray;
+   padding:20px 30px 20px 30px;
+   border-radius: 20px;
+   position: relative;
+   margin:30px auto;
+   background: white;
+   box-shadow: 0px 0px 5px 0px #333333;
+   display: flex;
+   flex-direction: row;
+}
+.box:hover{
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+.photo{
+    width:40%;
+}
+@media (min-width:856px) and (max-width:1024px){
+    .box{
+        width:500px;
+    }
+}
+@media (min-width:320px) and (max-width:855px){
+    .box{
+        flex-direction:column;
+        width:300px;
+    }
+    
+}
+
