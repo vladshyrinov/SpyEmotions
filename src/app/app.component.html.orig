@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+<header>
+    <p> SPY ON EMOTIONS </p>
+</header>
+<app-home></app-home>
+<footer>
+    <p>Developed by Spies on Lies</p>
+</footer>
+
+=======
+>>>>>>> origin/feat/adviced-section-design
+<!-- <h2 class='panel-heading'>
+  {{greetings}}
+</h2>
+<hr/>
+<div style="text-align:center">
+  <h1>
+    Ngx-Webcam Demo
+  </h1>
+
+  <div>
+    <app-webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></app-webcam>
+    <br/>
+    <button id="snapshotBtn" (click)="triggerSnapshot();">Take A Snapshot</button>
+  </div>
+</div>
+
+<div class="snapshot" *ngIf="webcamImage">
+  <h2>Nice one!</h2>
+  <img [src]="webcamImage.imageAsDataUrl"/>
+</div> -->
+<<<<<<< HEAD
+
+=======
+<app-advised-prof-list></app-advised-prof-list>
+>>>>>>> origin/feat/adviced-section-design
