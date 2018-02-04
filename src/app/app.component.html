@@ -1,20 +1,2 @@
-<h2 class='panel-heading'>
-  {{greetings}}
-</h2>
-<hr/>
-<div style="text-align:center">
-  <h1>
-    Ngx-Webcam Demo
-  </h1>
+<app-image-viewer></app-image-viewer>
 
-  <div>
-    <app-webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></app-webcam>
-    <br/>
-    <button id="snapshotBtn" (click)="triggerSnapshot();">Take A Snapshot</button>
-  </div>
-</div>
-
-<div class="snapshot" *ngIf="webcamImage">
-  <h2>Nice one!</h2>
-  <img [src]="webcamImage.imageAsDataUrl"/>
-</div>

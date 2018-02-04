@@ -1,0 +1,12 @@
+<main id="image-viewer-wrapper">
+  <app-webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event, currentImage)"></app-webcam>
+  <app-image-profession [currentImage] = "currentImage" ></app-image-profession>
+</main>
+
+
+
+
+<!--<div class="snapshot" *ngIf="webcamImage">
+  <h2>Nice one!</h2>
+  <img [src]="webcamImage.imageAsDataUrl"/>
+</div> -->
