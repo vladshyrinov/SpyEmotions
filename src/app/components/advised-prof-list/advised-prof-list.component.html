@@ -1,7 +1,4 @@
 <div class="body">
-  <header>
-    <p>SPIES ON EMOTIONS</p>
-  </header>
   <div class="wrapper">
     <div *ngFor="let prof of professions">
       <app-advised-prof [photoProf]="prof.img" [nameProf]="prof.name" [descrProf]="prof.description" [link1Prof]="prof.links[0]" [link2Prof]="prof.links[1]" [link3Prof]="prof.links[2]"></app-advised-prof>
