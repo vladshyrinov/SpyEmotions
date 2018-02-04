@@ -4,6 +4,8 @@ import { Subject } from 'rxjs/Subject';
 import { WebcamImage } from '../../modules/webcam/domain/webcam-image';
 import { Observable } from 'rxjs/Observable';
 import { EmotionsService } from '../../services/emotions.service';
+import {Router, ActivatedRoute} from '@angular/router';
+import { LsService } from '../../services/ls.service';
 
 @Component({
   selector: 'app-image-viewer',
@@ -24,7 +26,11 @@ export class ImageViewerComponent implements OnInit {
   private trigger: Subject<void> = new Subject<void>();
   public webcamImage: WebcamImage = null;
 
-  constructor(private emotionsService: EmotionsService) {
+  constructor(private emotionsService: EmotionsService, 
+    private router: Router,
+    private route: ActivatedRoute,
+    private lsService: LsService
+  ) {
   }
 
   ngOnInit() {
@@ -82,8 +88,7 @@ export class ImageViewerComponent implements OnInit {
   public countEquation(scores) {
     if (scores) {
       const s = scores;
-      const result = -7 * s.anger + 0.01 * s.happiness - 10 * s.contempt - 9 * s.disgust
-        - 5 * s.fear + 0.5 * s.sadness + 2 * s.surprise + 0.0001 * s.neutral;
+      const result = s.anger + s.contempt + s.disgust + s.fear + s.sadness;
       return result;
     } else {
       return 0;
@@ -91,13 +96,15 @@ export class ImageViewerComponent implements OnInit {
   }
 
   private nextImage() {
-    if (this.startImageIndex === 55) {
+    if (this.startImageIndex === 2) {
       clearInterval(this.timerId);
       this.weightsCollection.sort((weight1, weight2) => {
-        return weight1.weight - weight2.weight;
+        return weight2.weight - weight1.weight;
       });
+      this.router.navigate(['advised']);
       this.chosenProfessions.push(this.weightsCollection[0]);
       this.chosenProfessions.push(this.weightsCollection[1]);
+      this.lsService.setProfessionsRating(this.chosenProfessions);
     } else {
       this.startImageIndex++;
       this.currentImage = this.imagesUrls[this.startImageIndex];

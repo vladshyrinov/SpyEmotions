@@ -13,10 +13,10 @@ import { ImageViewerComponent } from './components/image-viewer/image-viewer.com
 import { LsService } from './services/ls.service';
 import { ImageProfessionComponent } from './components/image-viewer/image-profession/image-profession.component';
 
-
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'advised', component: AdvisedProfListComponent }
+  { path: 'advised', component: AdvisedProfListComponent },
+  { path: 'image-viewer', component: ImageViewerComponent}
 ];
 
 @NgModule({

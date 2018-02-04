@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Profession } from '../../profession';
+import { LsService } from '../../services/ls.service';
 @Component({
   selector: 'app-advised-prof-list',
   templateUrl: './advised-prof-list.component.html',
@@ -37,9 +38,19 @@ export class AdvisedProfListComponent implements OnInit {
     { id: 14, name: "Transport", img: "../../../assets/image/transport.jpg", description: "Some text some text some text", links: ["link1", "link2", "link3"] }
 
   ];
-  constructor() { }
+  chosenProfessions: Array<any> = [];
+  chosenProfessionsWithLinks: Array<any> = [];
+  constructor(private lsService: LsService) { }
 
   ngOnInit() {
+    this.chosenProfessions = this.lsService.getProfessionsRating();
+    this.chosenProfessions.forEach((chosenProfession) => {
+      this.professions.forEach((profession) => {
+        if (chosenProfession.id === profession.id) {
+          this.chosenProfessionsWithLinks.push(profession);
+        }
+      });
+    });
   }
 
 }
