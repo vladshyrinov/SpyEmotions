@@ -8,7 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AdvisedProfComponent implements OnInit {
   @Input() photoProf: string;
   @Input() nameProf: string;
-  @Input() descrProf: string;
   @Input() link1Prof: string;
   @Input() link2Prof: string;
   @Input() link3Prof: string;

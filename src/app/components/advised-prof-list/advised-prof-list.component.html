@@ -1,7 +1,8 @@
 <div class="body">
   <div class="wrapper">
+    <h2>Recommended professions for you</h2>
     <div *ngFor="let prof of professions">
-      <app-advised-prof [photoProf]="prof.img" [nameProf]="prof.name" [descrProf]="prof.description" [link1Prof]="prof.links[0]" [link2Prof]="prof.links[1]" [link3Prof]="prof.links[2]"></app-advised-prof>
+      <app-advised-prof [photoProf]="prof.img" [nameProf]="prof.name" [link1Prof]="prof.links[0]" [link2Prof]="prof.links[1]" [link3Prof]="prof.links[2]"></app-advised-prof>
     </div>
   </div>
 </div>

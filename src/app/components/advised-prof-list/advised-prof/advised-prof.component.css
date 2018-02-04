@@ -16,6 +16,22 @@
 .photo{
     width:40%;
 }
+.info a{
+    text-decoration: none;
+    padding:5px;
+ }
+ .source1{
+    border:1px solid red;
+    color:red;
+ }
+ .source2{
+  border:1px solid green;
+  color: green;
+ }
+ .source3{
+   border:1px solid lightseagreen;
+   color:lightseagreen;
+ }
 @media (min-width:856px) and (max-width:1024px){
     .box{
         width:500px;

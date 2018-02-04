@@ -1,12 +1,16 @@
-/* .body{
-    background: url("https://slodive.com/wp-content/uploads/2011/05/white-backgrounds/diamond-background.jpg");
-} */
+
 .wrapper{
     width:1000px;
     margin: 0 auto;
     font-family: 'Varela Round', sans-serif;
-    
 }
+.wrapper h2{
+    text-align:center;
+    margin-top:15px;
+}
+
+
+
 @media (min-width:856px) and (max-width:1024px){
     .wrapper{
         width:600px;
