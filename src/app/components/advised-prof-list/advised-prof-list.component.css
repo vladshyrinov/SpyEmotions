@@ -1,8 +1,8 @@
 
 .wrapper{
     width:1000px;
-    margin: 0 auto;
-    font-family: 'Varela Round', sans-serif;
+    margin: 0 auto 80px auto;
+    font-family: Courier, sans-serif;
 }
 .wrapper h2{
     text-align:center;
@@ -11,12 +11,12 @@
 
 
 
-@media (min-width:856px) and (max-width:1024px){
+@media (min-width:769px) and (max-width:1024px){
     .wrapper{
         width:600px;
     }
 }
-@media (min-width:500px) and (max-width:855px){
+@media (max-width:768px){
     .wrapper{
         width:300px;
     }

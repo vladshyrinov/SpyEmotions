@@ -26,7 +26,7 @@ export class ImageViewerComponent implements OnInit {
   private trigger: Subject<void> = new Subject<void>();
   public webcamImage: WebcamImage = null;
 
-  constructor(private emotionsService: EmotionsService, 
+  constructor(private emotionsService: EmotionsService,
     private router: Router,
     private route: ActivatedRoute,
     private lsService: LsService
@@ -53,10 +53,10 @@ export class ImageViewerComponent implements OnInit {
     this.currentImage = this.imagesUrls[this.startImageIndex];
     setTimeout(() => {
       this.triggerSnapshot();
-    }, 1000);
+    }, 600);
     this.timerId = setInterval(() => {
       this.nextImage();
-    }, 3000);
+    }, 1200);
   }
 
   triggerSnapshot(): void {
@@ -96,7 +96,7 @@ export class ImageViewerComponent implements OnInit {
   }
 
   private nextImage() {
-    if (this.startImageIndex === 2) {
+    if (this.startImageIndex === 55) {
       clearInterval(this.timerId);
       this.weightsCollection.sort((weight1, weight2) => {
         return weight2.weight - weight1.weight;
@@ -110,7 +110,7 @@ export class ImageViewerComponent implements OnInit {
       this.currentImage = this.imagesUrls[this.startImageIndex];
       setTimeout(() => {
         this.triggerSnapshot();
-      }, 1000);
+      }, 600);
     }
   }
 }

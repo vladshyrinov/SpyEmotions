@@ -4,8 +4,8 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class EmotionsService {
-  private baseUrl = 'http://localhost:58277';
-  // private baseUrl = 'https://spyemotions.azurewebsites.net';
+  // private baseUrl = 'http://localhost:58277';
+  private baseUrl = 'https://spyemotions.azurewebsites.net';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

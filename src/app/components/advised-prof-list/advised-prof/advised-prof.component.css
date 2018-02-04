@@ -1,47 +1,91 @@
-.box{
-   width:700px;
-   border:1px solid gray;
-   padding:20px 30px 20px 30px;
-   border-radius: 20px;
-   position: relative;
-   margin:30px auto;
-   background: white;
-   box-shadow: 0px 0px 5px 0px #333333;
-   display: flex;
-   flex-direction: row;
+.box {
+  width: 700px;
+  border: 1px solid gray;
+  padding: 20px 30px 20px 30px;
+  border-radius: 20px;
+  position: relative;
+  margin: 30px auto;
+  background: white;
+  box-shadow: 0px 0px 5px 0px #333333;
+  display: flex;
+  flex-direction: row;
 }
-.box:hover{
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
+.box:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
-.photo{
-    width:40%;
+
+.photo {
+  width: 40%;
 }
-.info a{
-    text-decoration: none;
-    padding:5px;
- }
- .source1{
-    border:1px solid red;
-    color:red;
- }
- .source2{
-  border:1px solid green;
+
+.info a {
+  text-decoration: none;
+  padding: 5px;
+}
+
+.source1 {
+  border: 1px solid red;
+  color: red;
+}
+
+.source2 {
+  border: 1px solid green;
   color: green;
- }
- .source3{
-   border:1px solid lightseagreen;
-   color:lightseagreen;
- }
-@media (min-width:856px) and (max-width:1024px){
-    .box{
-        width:500px;
-    }
 }
-@media (min-width:320px) and (max-width:855px){
-    .box{
-        flex-direction:column;
-        width:300px;
+
+.source3 {
+  border: 1px solid lightseagreen;
+  color: lightseagreen;
+}
+
+
+@media(min-width: 1024px) {
+    .info {
+        width: 400px;
     }
     
+    .info-wrapper {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+  .info-wrapper {
+    margin: 0 auto;
+  }
+  .info {
+    text-align: center;
+  }
+  .source-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .source {
+    width: 100px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width:769px) and (max-width:1023px) {
+  .box {
+    width: 600px;
+  }
+  .info-wrapper {
+      width: 500px;
+      display: flex;
+  }
+  .info {
+      width: 300px;
+  }
+
+}
+
+@media (min-width:320px) and (max-width:768px) {
+  .box {
+    flex-direction: column;
+    width: 200px;
+  }
 }
 

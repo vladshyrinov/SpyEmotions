@@ -6,9 +6,8 @@ export class LsService {
   constructor() { }
 
   public getProfessionsRating() {
-    let professionsRating = localStorage.getItem("professionsRating");
+    const professionsRating = localStorage.getItem("professionsRating");
     if (professionsRating) {
-      professionsRating = JSON.parse(professionsRating);
       return professionsRating;
     }
     return undefined;
