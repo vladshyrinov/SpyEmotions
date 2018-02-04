@@ -1,8 +1,0 @@
-<header>
-    <p> SPY ON EMOTIONS </p>
-</header>
-<footer>
-    <p>Developed by Spies on Lies</p>
-</footer>
-
-<router-outlet></router-outlet>

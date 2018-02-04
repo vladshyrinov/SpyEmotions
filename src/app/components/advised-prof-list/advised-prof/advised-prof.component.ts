@@ -12,7 +12,7 @@ export class AdvisedProfComponent implements OnInit {
   @Input() link1Prof: string;
   @Input() link2Prof: string;
   @Input() link3Prof: string;
-  
+
   constructor() { }
 
   ngOnInit() {
