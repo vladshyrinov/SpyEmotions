@@ -74,7 +74,7 @@ export class WebcamComponent implements AfterViewInit, OnDestroy {
   private initWebcam() {
     const _video = this.video.nativeElement;
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+      navigator.mediaDevices.getUserMedia({ video:  true  })
         .then(stream => {
           _video.srcObject = stream;
           _video.play();
